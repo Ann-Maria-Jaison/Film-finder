@@ -29,6 +29,3 @@ Movie Finder is a simple web application that allows users to search for movies 
 
 ## 📌 Author
 - Ann Maria Jaison
-
-
-
