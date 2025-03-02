@@ -24,8 +24,8 @@ Movie Finder is a simple web application that allows users to search for movies 
 - ⭐ Movie Ratings & Reviews
 - 📝 Personalized Recommendations
 
-##📜 API Used
+## 📜 API Used
 - TMDb API
 
-##📌 Author
-Ann Maria Jaison 
+## 📌 Author
+- Ann Maria Jaison 
