@@ -28,4 +28,4 @@ Movie Finder is a simple web application that allows users to search for movies 
 - TMDb API
 
 ## 📌 Author
-- Ann Maria Jaison  
+- Ann Maria Jaison
