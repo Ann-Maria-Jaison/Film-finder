@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <style>
+  /* Import Mirza Font */
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Mirza', cursive;
+    text-align: center;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Limit max width for better readability */
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    font-family: 'Mirza', cursive;
+}
+
+.caption {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to move to a new line on smaller screens */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    outline: none;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+/* Ensure dropdowns and button fit smaller screens */
+@media (max-width: 600px) {
+    select {
+        width: 100%;
+    }
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* MOVIE LIST SECTION */
+.movies-section {
+    margin-top: 30px;
+}
+
+/* Movie List Styling */
+#moviesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit ensures responsiveness */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Movie Card Styling */
+.movie-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 270px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+.movie-card:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Movie Poster */
+.movie-card img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.movie-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Mirza', cursive;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .dropdown-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    select {
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .movie-title {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Movie Finder</h1>
+        <div class="dropdown-container">
+            <label for="genre">Genre:</label>
+            <select id="genre"></select>
+
+            <label for="language">Language:</label>
+            <select id="language"></select>
+            <br><br>
+
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <h2>🎥 Movies List</h2>
+        <div id="moviesList"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
