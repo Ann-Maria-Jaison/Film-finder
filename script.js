@@ -1,4 +1,4 @@
-import { API_KEY } from './config.js'; // Import API Key
+const API_KEY = "e9f4e0f1e02432b8cad11c72c3883ce5";
 async function loadGenres() {
     const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`;
     const response = await fetch(url);
