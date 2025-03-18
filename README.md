@@ -1,4 +1,4 @@
-# 🎬 Movie Finder  
+# Movie Finder  
 
 Movie Finder is a simple web application that allows users to search for movies based on genre and language. It fetches movie details, including posters and descriptions, using the TMDb API. Users can also track and manage movies they have watched.   
 
